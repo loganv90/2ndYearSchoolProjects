@@ -1,0 +1,30 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  275  EB1
+
+Exercise 3: Pseudocode to Code
+
+
+Included Files:
+	-flipflop.cpp
+	-textmatch.cpp
+	-Makefile
+	-README
+
+Makefile Targets:
+	-make flipflop.o: compiles flipflop.cpp to create flipflop.o object file
+	-make flipflop: links flipflip.o to create flipflop executable file
+	-make textmatch.o: compiles textmatch.cpp to create textmatch.o object file
+	-make textmatch: links textmatch.o to create flipflop executable file
+	-make clean: removes the following files if they exist: flipflop.o flipflop textmatch.o textmatch
+
+Running Instructions:
+	-Within the directory of the Makefile and cpp files, run the command "make flipflop" or "make textmatch" to
+		compile either cpp file. Then use the command "./flipflop" or "./textmatch" respectively to run the program.
+	-When running the flipflop program you will be prompted to enter the length of an array. Input a length from
+		1 to 200 and press enter. Then type a space separated list containing the elements of the array. These 
+		elements must all be 32-bit non-negative integers. Once all elements of the array have been entered the
+		program will sort them and output the sorted list of elements from smallest to largest.
+	-When running the textmatch program you will be prompted to enter two strings. Once both strings have been
+		entered, the program will find all the times the first string appears within the second string and it will
+		output all the starting indicies in the second string where the first string exists.

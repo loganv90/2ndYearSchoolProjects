@@ -1,0 +1,27 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  275  EB1
+
+Exercise 5: Graph Concepts
+
+
+Included Files:
+	-digraph.cpp
+	-digraph.h
+	-graph_concepts.h
+	-edmonton-roads-2.0.1.txt
+	-Makefile
+	-README
+
+Makefile Targets:
+	-make graph_concepts.o: compiles graph_concepts.cpp to create graph_concepts.o object file
+	-make graph_concepts: links graph_concepts.o to create graph_concepts executable file
+	-make clean: removes the following files if they exist: graph_concepts.o graph_concepts
+
+Running Instructions:
+	-Within the directory of all the incuded files, run the command "make" to compile and link necessary files and create
+		the graph_concepts executable. Then use the command "./graph_concepts <text file with graph information>" to run 
+		the program. The only included text file with graph information is edmonton-roads-2.0.1.txt so run the command
+		"./ graph_concepts  edmonton-roads-2.0.1.txt".
+	-The program will count the number of individual connected graphical components in the graph it creates from the text
+		file and then it will output that number.

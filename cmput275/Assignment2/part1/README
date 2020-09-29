@@ -1,0 +1,41 @@
+Names:  LOGAN VAUGHAN, ANDREW CULBERSON
+ID #s:  1577489      , 1571644
+CMPUT  275  EB1
+
+Assignment 2: Driving Route Finder
+Part 1: Server
+
+
+Included Files:
+	-server.cpp
+	-heap.h
+	-dijkstra.cpp
+	-dijkstra.h
+	-digraph.cpp
+	-digraph.h
+	-wdigraph.h
+	-edmonton-roads-2.0.1.txt
+	-Makefile
+	-README
+
+Makefile Targets:
+	-make dijkstra.o: compiles dijkstra.cpp to create dijkstra.o object file
+	-make server.o: compiles server.cpp to create server.o object file
+	-make digraph.o: compiles digraph.cpp to create digraph.o object file
+	-make server: links dijkstra.o server.o and digraph.o to create server executable file
+	-make clean: removes the following files if they exist: dijkstra.o server.o digraph.o server
+
+Running Instructions:
+	-Within the directory of the Makefile text file and cpp files, run the command "make" to compile all cpp files. Then use the 
+		command "./server" run the program.
+	-The program is designed to find the shortest path between two points on the map of edmonton by following the roads on the map.
+		While running the program, use the command "R <int1> <int2> <int3> <int4>" to make a request. <int1> and <int2> are integers
+		representing the starting latitude and longitude respectively. <int3> and <int4> are integers representing the ending
+		latitude and longitude respectively. All the integers representing latitude and longitude must be measuements in degrees that
+		have been multiplied by 100000.
+	-After making a request, "N <int>" will be outputted. If <int> is 0 then there is no path between the two inputted points and
+		you may make another request. Otherwise, a path has been constructed. If a path has been constructed, enter the command "A"
+		to acknowlege. After acknowleging, a waypoint will be outputted by the program in the format "W <int5> <int6>" where
+		<int5> and <int6> are the latitude and longitude of the waypoint respectively. After a waypoint is outputted, input "A" to
+		get the next waypoint until the program outputs "E" which means that the destinatioin has been reached. Once the
+		program outputs "E", you may make another request.

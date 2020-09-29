@@ -1,0 +1,33 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  275  EB1
+
+Exercise 1: Display and Joystick
+
+
+Included Files:
+	-joy_cursor.cpp
+	-Makefile
+	-README
+
+Accessories:
+	-Arduino mega board
+	-breadboard jumper wire (5 pcs)
+	-breadboard
+	-lcd display
+	-joystick
+
+Wiring Instructions:
+	-Arduino analog pin A8 <--> joystick pin VRx
+	-Arduino analog pin A9 <--> joystick pin VRy
+	-Arduino digital pin 53 <--> joystick pin SW
+	-Arduino ground <--> joystick ground
+	-Arduino 5V <--> joystick +5V
+
+Running Instructions:
+	-build circuit and connect Arduino to VMware
+	-use terminal to navigate to the folder that contains the included files
+	-use command 'make upload' to run joy_cursor.cpp on the Arduino and wait for the map to load.
+	-The red cursor in the middle of the display will now move in the direction the joystick is pushed.
+		The cursor will move faster the further the joystick is pushed in a given direction.
+		The cursor is not able to leave the screen or enter the black area of the screen.

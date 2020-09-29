@@ -1,0 +1,28 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  275  EB1
+
+Exercise 2: Restaurants and Pointers
+
+
+Included Files:
+	-get_restaurant.cpp
+	-Makefile
+	-README
+
+Accessories:
+	-Arduino mega board
+	-lcd display
+
+Wiring Instructions:
+	-Arduino <--> lcd display
+
+Running Instructions:
+	-connect lcd display to arduino
+	-use terminal to navigate to the folder that contains the included files
+	-use command 'make upload' to run get_restaurant.cpp on the Arduino
+	-use the touchscreen to press the "FAST" button or the "SLOW" button
+	-the Arduino will then read all the restraunts from the sd card and then display the time it took
+		to read the restaurants. The Arduino will read the restraunts using the fast algorithm if the
+		"FAST" button is pressed. The Arduino will read the restaurants using the regular/slow algorithm
+		if the "SLOW" button is pressed.

@@ -1,0 +1,99 @@
+Names:  LOGAN VAUGHAN, ANDREW CULBERSON
+ID #s:  1577489      , 1571644
+CMPUT  275  EB1
+
+Assignment 2: Driving Route Finder
+Part 2: Server + Client
+
+
+Included Files & Folders:
+	-server/
+	-client/
+	-README (this file)
+
+
+
+
+Server (server/):
+	Included Files:
+		-digraph.cpp
+		-digraph.h
+		-dijkstra.cpp
+		-dijkstra.h
+		-edmonton-roads-2.0.1.txt
+		-heap.h
+		-Makefile
+		-serialport.cpp
+		-serialport.h
+		-server.cpp
+		-wdigraph.h
+
+	Makefile Targets:
+		-make serialport.o: compiles serialport.cpp to create serialport.o object file
+		-make dijkstra.o: compiles dijkstra.cpp to create dijkstra.o object file
+		-make server.o: compiles server.cpp to create server.o object file
+		-make digraph.o: compiles digraph.cpp to create digraph.o object file
+		-make server: links dijkstra.o server.o digraph.o and serialport.o to create server executable file
+		-make clean: removes the following files if they exist: dijkstra.o server.o digraph.o serialport.o server
+
+	Running Instructions:
+		-Within the folder server/, run the command "make" to compile all cpp files. 
+		-First, start the Arduino program in client/.
+		-Second, use the command "./server" run this program.
+		-This program is designed to take input from an Arduino running the program in client/. The input taken by this program will
+			designate a start and end point on the map of Edmonton. This program will find the shortest path between the start and
+			end points by following the roads on the map of Edmonton and provide output to the Arduino so that the Arduino can draw
+			the path between the start and end points.
+		-This program must be running in order for the Arduino to draw paths, but it has no user functionality.
+
+
+
+
+Client (client/):
+	Included Files:
+		-client.cpp
+		-consts_and_types.h
+		-draw_route.cpp
+		-draw_route.h
+		-lcd_image.cpp
+		-lcd_image.h
+		-Makefile
+		-map_drawing.cpp
+		-map_drawing.h
+		-serial_handling.cpp
+		-serial_handling.h
+
+	Accessories:
+		-Arduino mega board
+		-9 jumper wires
+		-joystick
+		-2 buttons
+		-breadboard
+		-Arduino to PC cable
+		-LCD screen
+
+	Wiring Instructions:
+		VRx (joystick) <--> Analog Pin A8
+		VRy (joystick) <--> Analog Pin A9
+		SW  (joystick) <--> Digital Pin 53
+		GND (joystick) <--> GND (Arduino)
+		+5V (joystick) <--> 5V
+		GND (Arduino) <--> Zoom Out Button <--> Digital Pin 47
+		GND (Arduino) <--> Zoom In Button  <--> Digital Pin 45
+		LCD screen <--> Arduino
+
+	Makefile targets:
+		-make: compiles the program
+		-make upload: compiles the program and sends it to Arduino
+
+	Running Instructions:
+		-Build circuit and connect Arduino to VMware.
+		-Within the folder client/, run the command "make upload" to compile all cpp files and run the program to the Arduino.
+		-Once the program is running on the Arduino, run the program in server/ on the PC.
+		-When both programs are running, you may navigate the map of Edmonton using the joystick and you may use the buttons
+			to adjust the zoom level of the map. While the message "FROM?" is displayed at the bottom of the LCD screen, you
+			may select a starting point on the map of Edmonton by pressing the joystick down while hovering over the desired
+			starting place with the cursor. Then the message will change to "TO?" and you may select an ending point in the
+			same way. When start and end points have been selected, the Arduino will work with the PC to find the shortest
+			path from the start to the end (following the roads on the map) and the path will be displayed on the LCD screen.
+			After a path has been drawn, you may select a new start and end and the process repeats.

@@ -1,0 +1,30 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  275  EB1
+
+Exercise 4: Dynamic Hashing
+
+
+Included Files:
+	-exercise4.cpp
+	-hash_table.h
+	-linked_list.h
+	-Makefile
+	-README
+
+Makefile Targets:
+	-make exercise4.o: compiles exercise4.cpp to create exercise4.o object file
+	-make exercise4: links exercise4.o to create exercise4 executable file
+	-make clean: removes the following files if they exist: exercise4.o exercise4
+
+Running Instructions:
+	-Within the directory of the Makefile and cpp files, run the command "make" to compile and link necessary files
+		and create the exercise4 executable. Then use the command "./exercise4" to run the program.
+	-The program allows the user to add, remove and view elements inside a hash table. The hash table will dynamically
+		add or remove space as needed. The program will terminate if the hash table is empty. Note: the hash table will
+		only remove extra space when an item is removed. If a hash table is allocated with many more buckets than there
+		are items, the extra buckets will only be removed if an item is removed.
+	-The commands that can be used when running exercise4.cpp are: "S" (prints the current number of items in hash
+		table), "I <int>" (inserts the integer item <int> into hash table), "R <int>" (removes the integer item <int>
+		from the hash table. Program will terminate if item is not found), "Q <int>" (returns "found" if integer item
+		is in hash table or "not found" if it is not), "STOP" (ends the program).

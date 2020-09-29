@@ -1,0 +1,37 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  275  EB1
+
+Exercise 6: STL Concepts Description
+
+
+Included Files:
+	-complex_postfix.cpp
+	-student_hash.cpp
+	-Makefile
+	-README
+
+Makefile Targets:
+	-make complex_postfix.o: compiles complex_postfix.cpp to create complex_postfix.o object file
+	-make complex_postfix: links flipflip.o to create complex_postfix executable file
+	-make student_hash.o: compiles student_hash.cpp to create student_hash.o object file
+	-make student_hash: links student_hash.o to create complex_postfix executable file
+	-make clean: removes the following files if they exist: complex_postfix.o complex_postfix student_hash.o student_hash
+
+Running Instructions:
+	-Within the directory of the Makefile and cpp files, run the command "make" to compile both cpp files. Then use the 
+		command "./complex_postfix" or "./student_hash" to run the either program.
+	-When running the complex_postfix program, you can create an equation in postfix notaion with complex numbers that will
+		be solved. The elements of the equation should be inputted one at a time from the front of the equation to the back
+		of the equation. A complex number can be inputted using the command "V <int1> <int2>" where int1 is an integer
+		representing the real part of the complex number and int2 is an integer repersenting the imaginary part. The unary 
+		operator conjugation can be inputted with the command "U c". The unary operator negation can be inputted with the
+		command "U -". Binary operators subraction, addition, and multiplication can be inputted with the commands "B -", 
+		"B +", and "B *" respectively. Once the entire equation has been inputted, enter the command "S" to solve the equation.
+	-When running the student_hash program, you can create and alter a database of students with certain commands. The 
+		database will start out empty but, students can be added with the command "I <name> <id> <grade>" where name is the 
+		name of the student, id is the integer identification number of the student, and grade is the grade of the student in
+		an integer format. Searches for students can be preformed with these commands: "Q n <name>", "Q i <id>", and
+		"Q g <grade>". These command will print all students with these characteristics (note that identification numbers are
+		unique to one student). The command "R <id>" will remove the student with the given identification number. Finally,
+		the command "S" will end the program.

@@ -1,0 +1,89 @@
+CMPUT 275 EB1
+Names: Andrew Culberson, Logan Vaughnan
+ID #s: 1571644         , 1577489
+Final Project: Build Your Own Tower Defense (BYOTD)
+
+
+
+
+Video Link:
+	https://drive.google.com/drive/folders/1Z4IZiu8Wt40yymHjHny7WPAwip-luwYZ?usp=sharing
+
+
+
+
+Additional Notes:
+	Our submission uses some files that we used for assignment 2.
+	The files in the client folder as well as server.cpp in the server folder are all our files that we made specifically for the final project.
+	The digraph files, serialport files and heap.h were files given to us for assignment 2 (we did not make them).
+	The dijkstra files we made for assignment 2 and are being reused here.
+
+
+
+
+Included Files & Folders:
+	-server/
+	-client/
+	-README (this file)
+
+
+
+
+Server (server/):
+	Included Files:
+		-digraph.cpp
+		-digraph.h
+		-dijkstra.cpp
+		-dijkstra.h
+		-heap.h
+		-Makefile
+		-serialport.cpp
+		-serialport.h
+		-server.cpp
+		-wdigraph.h
+
+	Makefile Targets:
+		-make serialport.o: compiles serialport.cpp to create serialport.o object file
+		-make dijkstra.o: compiles dijkstra.cpp to create dijkstra.o object file
+		-make server.o: compiles server.cpp to create server.o object file
+		-make digraph.o: compiles digraph.cpp to create digraph.o object file
+		-make server: links dijkstra.o server.o digraph.o and serialport.o to create server executable file
+		-make clean: removes the following files if they exist: dijkstra.o server.o digraph.o serialport.o server
+
+	Running Instructions:
+		Within the folder server/, run the command "make" to compile all cpp files. 
+		First, start the Arduino program in client/.
+		Second, use the command "./server" run this program.
+		This program is designed to take input from an Arduino running the program in client/. The input taken by this program will be used to calculate the path of the enemies. This program will find the shortest for the enemies to take and send this path back to the Arduino so the Arduino can use it.
+		This program must be running in order for the game to work, but it has no user functionality.
+
+
+
+
+Client (client/):
+	Included Files:
+		-consts.h
+		-Makefile
+		-serial_handling.cpp
+		-serial_handling.h
+		-towerd.cpp
+
+	Accessories:
+		-Arduino mega board
+		-Arduino to PC cable
+		-LCD screen
+		-Stylus
+
+	Wiring Instructions:
+		LCD screen <--> Arduino
+
+	Makefile targets:
+		-make: compiles the program
+		-make upload: compiles the program and sends it to Arduino
+
+	Running Instructions:
+		First, run the command 'make upload' in the client directory. Next, in the server directory, run the command 'make' followed by the command './server'. The game should start.
+		This is the full implementation of the game BYOTD. BYOTD is, of course, a tower defense game but, it has a slight twist. BYOTD features a grid based system where the player may select their base and the enemy spawn. The eneimes will navigate from their spawn to the players base. If they reach the base, the player has lost. However, the player can build walls (to strategically lengthen the path of the enemies) and towers (to destroy enemies) to defend their base.
+		The GUI on the bottom of the screen will explain to the player what to do and when they violate game rules. This GUI also feautures some buttons/displays. The bottom right of the screen displays the players monetary balance. To the left of that, there are three building buttons and the "Go" button. When build buttons are pressed, the GUI changes to display the cost of building the selected item. When the "Go" button is pressed, it will initiate a wave of enemies and breifly disable the player from building anything.
+		The game is split up into two modes, build mode and watch mode. In build mode, the user can place down or remove walls and towers (for a price/refund). To place walls, one must press the wall button and then tap/drag on the gameplay area of the screen. The same goes for towers. The upgrade button is special in that, once it is pressed, the user can tap on an exisitng tower to upgrade it. A tower can be upgraded a maximum of two times. The first upgrade costs $3, and the second upgrade costs $4. The upgrades increase the damage of the towers.
+		Whenever the enemies reach the base, the game ends and a new game begins. Otherwise, each game is endless.
