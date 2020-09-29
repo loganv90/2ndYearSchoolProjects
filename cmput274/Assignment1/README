@@ -1,0 +1,15 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Assignment 1: Huffman Coding
+
+
+
+Running the code:
+
+util.py requires the files bitio.py, compress.py, huffman.py, webserver.py and the wwwroot folder to work properly. To use the code, open a bash terminal and navigate to the wwwroot directory. Then enter the command "python3 ../webserver.py" to open the webserver. Then go to the url "http://localhost:8000" and you will be able to see the webpage which contains an image of Huffman. Note that the port can be changed by modifying the variable port in webserver.py.
+
+To compress a file, you must first place the file you wish to compress into the wwwroot directory. Then open a bash terminal and navigate to the wwwroot directory. Then enter the command "python3 ../compress.py somefile.ext" where 'somefile' is the name of the file that will be compressed and 'ext' is its extension.
+
+To view or download a decompressed version of the file that you just compressed, open the web server and then go to the url "http://localhost:8000/somefile.ext" and you will be able to view or download the decompressed file.

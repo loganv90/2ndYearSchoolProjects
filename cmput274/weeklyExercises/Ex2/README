@@ -1,0 +1,9 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Exercise  2: Unfair Dice
+
+Notes and Assumptions:
+	The first function, biased_rolls, takes three inputs: prob_list, s, n. The input prob_list is a list of probabilities that correspond to the chances of rolling different sides of an unfair dice. The list must contail floating point values and all the elements of the list should add up to 1. The input s is the seed that the random module, and the input n is the number of times the dice will be rolled. The function returns rolls which is a list of the dice sides that were rolled.
+	The second function, draw_histogram, takes the inputs: m, rolls, width. The input m is the number of dice sides. The input rolls is a list of dice sides that have been rolled, and the inout width is the width of the histogram that will be generated. The function doesn't return anything but it generates a histogram that represents the dice rolls.

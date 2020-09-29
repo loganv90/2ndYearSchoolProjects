@@ -1,0 +1,11 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Exercise  4: Deck of Cards
+
+Notes and Assumptions:
+	When running the program from the terminal it must be called with the command: python3 deck.py <example.txt>
+	Where <example.txt> is a text file containing a shuffled deck of cards.
+	On each line of this text file there must be the abbreviated form of a card name.
+	The program will analyse the deck that was called upon and, if the deck is valid, the program will simulate a game of high card draw with this deck and display the winners of each round until the deck is empty. This will be a two player game of high card draw (player vs. opponent).

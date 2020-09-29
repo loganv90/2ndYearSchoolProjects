@@ -1,0 +1,13 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Exercise  7: Euler’s Phi Function
+
+
+Included Files:
+	eulerphi.cpp
+	README
+
+Running Instructions:
+	Navigate through the terminal and into the folder where eulerphi.cpp is located then enter the command: "g++ euperphi.cpp -o eulerphi". This command will compile the eulerphi.cpp file. Then enter the command: "./eulerphi". This command will run the program eulerphi.cpp. The program will prompt you for an input. Input one number from 1 to 2^31 - 1 (the largest 32-bit number). The program will then output n (the number you inputted), the calculated phi(n), phi(n)/n, and x/2^14 where x is the number of different numbers k that satisfy the equation gcd(n,k)=1 where 2^14<=k<2^15.

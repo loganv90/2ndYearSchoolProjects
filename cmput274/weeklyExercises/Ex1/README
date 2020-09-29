@@ -1,0 +1,8 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Exercise  1: Password Validator and Generator
+
+Notes and Assumptions:
+	When validator.py is run it will first promt the user to enter a password that it will validate then it will ask for the length of a randomly generated secure password witch it will generate

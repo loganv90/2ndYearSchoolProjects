@@ -1,0 +1,10 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Exercise  3: Word Frequency
+
+Notes and Assumptions:
+	The program will take a text file and count all the words in the text file and save them in an alphabetically organized list in a new text file. The list will contain the word names, the number of times they were used in the text file and their frequency of use in the text file.
+	When running the program from the terminal, the user must specify the input text file by typing the name of the text file after the name of the program as an extra argument. The user must specify one text file.
+	The program used the functions error_check to make sure the user entered the correct number of arguments, read_file to collect all the words from the file the user specified and write_output to create the new text file and make the list of words.

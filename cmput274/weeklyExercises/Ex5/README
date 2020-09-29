@@ -1,0 +1,44 @@
+Name: LOGAN VAUGHAN
+ID #:  1577489
+CMPUT  274  EA1
+
+Exercise 5: Counting Lights
+
+
+Included Files:
+	-counting.cpp
+	-Makefile
+	-README
+
+Accessories:
+	-Arduino mega board
+	-breadboard jumper wire (11 pcs)
+	-5 resistors (330 ohm)
+	-5 LEDs
+	-3 buttons
+	-breadboard
+	-computer to Arduino cable
+
+Wiring Instructions:
+	-Arduino pin 13 <--> long LED lead |red LED 4| short LED lead <--> resistor 5 <--> Arduino Ground
+	-Arduino pin 12 <--> long LED lead |red LED 3| short LED lead <--> resistor 4 <--> Arduino Ground
+	-Arduino pin 11 <--> long LED lead |green LED| short LED lead <--> resistor 3 <--> Arduino Ground
+	-Arduino pin 10 <--> long LED lead |red LED 2| short LED lead <--> resistor 2 <--> Arduino Ground
+	-Arduino pin 9 <--> long LED lead |red LED 1| short LED lead <--> resistor 1 <--> Arduino Ground
+	-Arduino pin 7 <--> button lead |button| button lead <--> Arduino Ground
+	-Arduino pin 6 <--> button lead |button| button lead <--> Arduino Ground
+	-Arduino pin 5 <--> button lead |button| button lead <--> Arduino Ground
+
+Makefile Targets:
+	-make: builds the project
+	-make upload: sends project to Arduino
+
+Running Instructions:
+	-build circuit and connect Arduino to VMware
+	-use terminal to navigate to the folder that contains the included files
+	-use command 'make' then 'make upload' to run counting.cpp on the Arduino
+	-now the Arduino will use the LEDs to count in binary. The button connected to pin 6 will increment
+		by 1 the number that the LEDs are displaying. The button connected to pin 7 will decrement the 
+		LEDs. The button connected to pin 5 will turn off all LEDs and store the last LED combination in 
+		memory and then restore this combination on the next press (every first press of this button will 
+		save a combination and every second press will load the previously saved combination).
