@@ -1,8 +1,5 @@
-Contained in the folders cmput274 and cmput275 is the coding I did in my second year of university for the classes CMPUT 274 and CMPUT 275.
-Both CMPUT 275 and CMPUT 275 are introductory classes to computing. CMPUT 275 has CMPUT 274 as a prerequisite.
-
-Unfortunately, the details of the problems that the code solved are not included in the folders.
-Also, not all of the files have READMEs that explain their purpose.
+The folders cmput274 and cmput275 contain the coding projects I completed in my second year of university for the classes CMPUT 274 and CMPUT 275.
+The details of the problems that the code solves are not included in the folders, and not all the files have READMEs that explain their purpose.
 
 
 cmput274:
